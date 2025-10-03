@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily To-Do List</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Daily To-Do List</h2>
+      <input type="text" id="todoInput" placeholder="Masukkan tugas baru" />
+      <input type="date" id="dateInput" />
+      <button onclick="addTodo()">Tambah</button>
+      <br /><br />
+      <select id="filterDate">
+        <option value="">Tampilkan Semua</option>
+        <option value="today">Hari Ini</option>
+        <option value="upcoming">Akan Datang</option>
+        <option value="past">Sudah Lewat</option>
+      </select>
+      <button class="filter-btn" onclick="filterTodo()">Terapkan Filter</button>
+      <button class="clear-btn" onclick="clearAll()">Hapus Semua</button>
+      <table>
+        <thead>
+          <tr>
+            <th>Tugas</th>
+            <th>Tanggal Batas</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody id="todoList">
+          <tr>
+            <td colspan="3">Belum ada tugas.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>
